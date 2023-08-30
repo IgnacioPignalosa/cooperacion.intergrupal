@@ -36,9 +36,19 @@ var personas=[];
             let nom = document.getElementById('nombre').value;//Tomo el nombre
             let pos = personas.findIndex(persona => persona.nom === nom); //lo busco en el arreglo
             if (pos === -1 ){
-                alert("No encontré nada.")
+                Swal.fire("No encontré nada.")
+                Swal.fire({
+                    icon: 'error',
+                    title: 'ERROR',
+                    text: 'No puedes borrar un nombre que no este en la lista!',
+                    confirmButtonColor: "#2E8B57",
+                  })
             }else{
-                alert("Voy a borrar la posición " + (pos + 1) + " correspondiente a "+ personas[pos].nom)
+                Swal.fire({
+                    icon: 'info',
+                    text: 'Voy a borrar la posición ' + (pos + 1) + ' correspondiente a '+ personas[pos].nom,
+                    confirmButtonColor: "#2E8B57",
+                })
                 personas.splice(pos,1); // pum! lo borro
                 mostrar(personas);
             }
