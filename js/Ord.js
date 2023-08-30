@@ -46,7 +46,7 @@ var personas=[];
             }else{
                 Swal.fire({
                     icon: 'info',
-                    text: 'Voy a borrar la posición ' + (pos + 1) + ' correspondiente a '+ personas[pos].nom,
+                    text: 'Se borrará la posición ' + (pos + 1) + ' correspondiente a '+ personas[pos].nom + '.',
                     confirmButtonColor: "#2E8B57",
                 })
                 personas.splice(pos,1); // pum! lo borro
