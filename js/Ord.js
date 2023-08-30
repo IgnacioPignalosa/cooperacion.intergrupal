@@ -38,7 +38,7 @@ var personas=[];
             if (pos === -1 ){
                 alert("No encontré nada.")
             }else{
-                alert("Voy a borrar la posición " + pos + " correspondiente a "+ personas[pos].nom)
+                alert("Voy a borrar la posición " + (pos + 1) + " correspondiente a "+ personas[pos].nom)
                 personas.splice(pos,1); // pum! lo borro
                 mostrar(personas);
             }
